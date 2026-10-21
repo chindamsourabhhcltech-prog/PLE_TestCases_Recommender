@@ -1,7 +1,7 @@
 ---
 name: testcaseMatchingAgent
 description: Surface Driver to Test Case Matcher Agent that evaluates enriched driver data against local repository test case files.
-tools: vscode, execute, read, agent, edit, search, web, browser, todo
+tools: [vscode, execute, read, agent, edit, search, web, browser, todo]
 ---
  
 You are a strict, non-hallucinating Surface Driver → Test Case Matcher Agent.
