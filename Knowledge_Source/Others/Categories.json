@@ -605,84 +605,84 @@
           "name": "Office Document Generation - Report Creation",
           "acronym": "ODR",
           "description": "Tests multi-document workflows with large Word and Excel files, including opening, scrolling, navigation, editing, and overall system responsiveness.",
-          "drivers": ["SAM", "WIFI", "BT", "Ethernet", "Graphics", "WoT"]
+          "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Graphics", "WoT"]
         },
         {
           "sno": 2,
           "name": "Office Document Generation - PowerPoint",
           "acronym": "ODP",
           "description": "Validates PowerPoint behavior on external monitors, full-screen slideshows, presenter view, and extended desktop presentation scenarios.",
-          "drivers": ["SAM", "WIFI", "BT", "Ethernet", "Graphics"]
+          "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Graphics"]
         },
         {
           "sno": 3,
           "name": "Office High Load Scenarios - Word/Excel",
           "acronym": "OHL",
           "description": "High-load testing with multiple large Word and Excel documents open simultaneously, including editing, switching between documents, and system stability under sustained load.",
-          "drivers": ["SAM", "WIFI", "BT", "Ethernet", "Graphics", "WoT"]
+          "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Graphics", "WoT"]
         },
         {
           "sno": 4,
           "name": "Windows Mail",
           "acronym": "MAIL",
           "description": "Tests email synchronization, send/receive functionality, and overall Mail app behavior while the device is in Connected Standby (CS) mode.",
-          "drivers": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
+          "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
         },
         {
           "sno": 5,
           "name": "Windows Calendar",
           "acronym": "CAL",
           "description": "Validates calendar appointment syncing, reminders, and responsiveness during Connected Standby (CS) mode.",
-          "drivers": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
+          "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
         },
         {
           "sno": 6,
           "name": "Microsoft Teams - High Load Metrics",
           "acronym": "TML",
           "description": "Evaluates Microsoft Teams performance and stability under extended video calls, screen sharing, presentations, and team/channel creation with high resource load.",
-          "drivers": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
+          "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
         },
         {
           "sno": 7,
           "name": "Microsoft Teams",
           "acronym": "TMS",
           "description": "Tests core Microsoft Teams functionality including instant messaging, desktop sharing, multitasking with OneNote, audio/video calls, and meeting features.",
-          "drivers":["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
+          "driverTags":["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
         },
         {
           "sno": 8,
           "name": "OneNote",
           "acronym": "ONE",
           "description": "Validates OneNote navigation, pen markup and inking, content embedding, external monitor support, split-screen usage, and behavior during Connected Standby.",
-          "drivers":["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera", "WoT"]
+          "driverTags":["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera", "WoT"]
         },
         {
           "sno": 9,
           "name": "Zoom (Store App)",
           "acronym": "ZOOM",
           "description": "Tests Zoom meetings, instant messaging, screen and media sharing, and multitasking while playing media in the background.",
-          "drivers":["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
+          "driverTags":["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
         },
         {
           "sno": 10,
           "name": "Discord (Store App)",
           "acronym": "DISC",
           "description": "Validates Discord voice/video calls, instant messaging, server interactions, and screen/media sharing while running background media.",
-          "drivers":["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
+          "driverTags":["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"]
         },
         {
           "sno": 11,
           "name": "Copilot",
           "acronym": "COP",
           "description": "Comprehensive testing of Copilot AI features across Microsoft Edge, Microsoft 365 applications (Word, PowerPoint, Excel, Teams, Outlook), and Windows integration, including voice input, commands, and image handling.",
-          "drivers":["NPU"]
+          "driverTags":["NPU"]
         },
         {
           "sno": 12,
           "name": "Recall (25H2 Features)",
           "acronym": "REC",
           "description": "Validates Recall functionality including timeline navigation, Screenray analysis, the 'Now' button, Click to Do, filters, privacy options, and interactions with the Copilot key.",
-          "drivers":["NPU"]
+          "driverTags":["NPU"]
         }
       ]
     },
@@ -783,34 +783,454 @@
       "description": "Audio covers end-to-end Microsoft Surface audio validation across the Windows audio subsystem and user experience, including audio driver packages, codecs, miniports, services, Audio Processing Objects (APOs), DSP and offload processing, internal speakers, microphone arrays, audio enhancements, voice processing, wired and wireless endpoints, Bluetooth Classic and LE Audio, USB and USB-C audio, Surface Dock and display-audio paths, endpoint discovery and routing, format and sample-rate support, stream concurrency, power-state behavior, real-time communications, speech and accessibility experiences, Microsoft Edge media streaming, and application-specific playback and capture. Validation targets correct installation, enumeration, routing, processing, persistence, audio quality, latency, synchronization, controls, power transitions, interoperability, and recovery. Issues include missing or unstable endpoints, no or low audio, incorrect routing, distortion, imbalance, echo, noise, feedback, clipping, pops, clicks, dropouts, glitches, latency, audio-video desynchronization, setting-persistence failures, service or driver failures, crashes, hangs, and regressions after driver, firmware, operating-system, accessory, or application changes.",
       "sub-categories": [
         {
-          "sno": "1",
-          "name": "Drivers",
+          "sno": 1,
+          "name": "Amazon Prime Video (Store App) (Audio Endpoint Quality)",
           "acronym": "",
-          "description": "Covers validation of the Microsoft Surface audio software package and its integration with Windows and platform hardware, including audio bus, codec and miniport drivers, component and extension drivers, display-audio drivers, Bluetooth and USB audio dependencies, Audio Processing Objects (APOs), DSP integration, audio services, companion applications, firmware interfaces, and driver-delivered endpoint topology or configuration. Validate clean-image installation, side-load and Windows Update paths, update, rollback, uninstall and reinstall, version and date, signatures and INF correctness, service startup, device enumeration, endpoint availability, reboot and power-transition recovery, stream creation, APO initialization and data flow, system stability, and applicable HLK or certification requirements. Map issues here when the primary failure is driver-package installation or servicing, a missing or warning-state device, incorrect version, broken enumeration or topology, service or APO activation failure, driver or firmware incompatibility, crash, hang, bugcheck, memory or resource fault, or an audio regression introduced by a driver, firmware, or operating-system update. Application-only behavior and otherwise healthy platform features belong in their respective workload categories."
+          "description": "Validates Amazon Prime Video Store app audio endpoint quality across supported endpoints including Dock.",
+          "driverTags": [
+            "Audio",
+            "Dock"
+          ]
         },
         {
-          "sno": "2",
-          "name": "Features",
+          "sno": 2,
+          "name": "Amazon Prime Video (Store App) (Media Controls)",
           "acronym": "",
-          "description": "Covers platform-level Microsoft Surface audio capabilities and cross-workload behavior independent of a single communications client, website, or application. Scope includes built-in speakers and microphone arrays; microphone directionality and beamforming; acoustic echo cancellation, noise suppression, automatic gain control, Voice Clarity and Voice Focus; Dolby and spatial-audio technologies; equalization, virtualization and volume leveling; Personal Audio Sharing; Bluetooth Classic and Bluetooth LE Audio; 3.5 mm, USB and USB-C audio; Surface Dock and HDMI or DisplayPort audio paths; endpoint discovery, default-device selection and transitions; channel balance, volume and media-key behavior; formats, sample rates and bit depths; stream concurrency; audio-video synchronization; offload and low-power playback; orientation, attach or detach behavior; setting persistence; and Modern Standby, sleep, hibernate, reboot and resume scenarios, where supported. Validate clear, balanced, continuous and correctly processed render and capture audio, correct endpoint routing and switching, control responsiveness, feature enablement and persistence, synchronization, interoperability and reliable recovery. Map cross-application issues such as distortion, clipping, imbalance, echo, noise, feedback, dropouts, incorrect processing, unsupported formats, wrong endpoint selection, failed transitions, PAS synchronization failures or power-state regressions here; map package or enumeration defects to Drivers and workload-specific failures to Communication, Edge Browser Streaming or Applications."
+          "description": "Validates Amazon Prime Video Store app media controls functionality.",
+          "driverTags": [
+            "Audio"
+          ]
         },
         {
-          "sno": "3",
-          "name": "Communication",
+          "sno": 3,
+          "name": "Amazon Prime Video (Store App) (Volume Controls - Support/Functionality)",
           "acronym": "",
-          "description": "Covers real-time communications, conversational audio, Windows speech and related accessibility workloads on Microsoft Surface, including voice and video calls in clients such as Microsoft Teams, Zoom, Webex and similar services, as well as Narrator, Voice Access, voice typing, dictation, speech recognition and other communication-oriented accessibility experiences. Validate full-duplex capture and render through built-in speakers and microphone arrays, wired headsets, USB or USB-C devices, Bluetooth Classic and LE Audio devices, and display or Surface Dock output combined with the intended microphone input. Expected behavior includes correct device discovery and selection, intelligible two-way audio, stable communications processing such as beamforming, acoustic echo cancellation, noise suppression, automatic gain control, Voice Focus or Voice Clarity where supported, correct Bluetooth communications mode, mute and unmute, call and media controls, endpoint switching, notifications, concurrent media, power transitions and recovery. Map issues such as one-way or missing call audio, echo, feedback, excessive noise, robotic or distorted speech, low microphone level, dropouts, latency, wrong input or output selection, Bluetooth profile or quality changes, failed mute state, speech-recognition failure or communication-specific endpoint transitions here. Browser-hosted media playback belongs in Edge Browser Streaming, and non-communications application audio belongs in Applications."
+          "description": "Validates Amazon Prime Video Store app volume control support and functionality.",
+          "driverTags": [
+            "Audio"
+          ]
         },
         {
           "sno": 4,
-          "name": "Edge Browser Streaming",
+          "name": "Application - Copilot (Audio Endpoint Quality)",
           "acronym": "",
-          "description": "Covers website-hosted audio and video media playback in Microsoft Edge on Microsoft Surface, including music, video, protected or DRM-controlled content, adaptive or high-quality streams, and representative services such as YouTube, Netflix, Disney+, Hulu, Amazon and Spotify web experiences. Validate playback through built-in speakers, 3.5 mm, USB or USB-C, Bluetooth Classic, Bluetooth LE Audio, external display and Surface Dock audio paths; codec and format handling; protected-content playback; audio quality and continuity; audio-video synchronization; hardware, system and webpage volume controls; play, pause, resume, seek and mute; tab, window, foreground and background transitions; endpoint arrival, removal and switching; concurrent tabs or streams; network interruption and recovery; and supported sleep, Modern Standby or resume behavior. Map issues here when they reproduce specifically during media consumption in Microsoft Edge, including no sound, playback stalls, distorted or intermittent audio, lip-sync errors, control failures, DRM or codec-related playback failures, incorrect browser endpoint routing, loss of audio after seek or tab switching, or browser-specific power-state regressions. Real-time browser calls remain Communication, and the same symptom in an installed application belongs in Applications."
+          "description": "Validates Copilot voice response audio quality and endpoint routing across DUT speakers, 3.5mm, USB, Bluetooth, LE Audio, and display audio paths.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
         },
         {
-          "sno": "5",
-          "name": "Applications",
+          "sno": 5,
+          "name": "Application - [Media Player (Inbox App)] (Audio Endpoint Quality)",
           "acronym": "",
-          "description": "Covers application-specific Microsoft Surface audio playback, capture and control behavior outside website-hosted Microsoft Edge media and dedicated real-time communications workloads. Scope includes Windows inbox, Microsoft Store, desktop and media applications such as Media Player, Movies and TV, streaming-service apps, Spotify, Camera, Sound Recorder, Copilot voice experiences and other applications that render, record, process or respond to audio. Validate local and streamed content, application startup and recovery, supported codecs, containers, channels, formats and sample rates, microphone selection and recording, playback quality, hardware and software volume, play, pause, resume, seek and mute, endpoint selection and transitions across built-in, wired, USB or USB-C, Bluetooth, LE Audio, external display and Surface Dock paths, application concurrency, background and foreground behavior, accessibility output, and supported sleep, Modern Standby, detach, resume and reboot scenarios. Map issues here when audio behavior is isolated to a particular non-Edge application, including no playback or capture, wrong endpoint, silent or corrupted recording, distorted or intermittent audio, format failure, broken media controls, incorrect persistence, application-specific latency or synchronization, or failure after an application lifecycle or power event. Cross-application platform defects belong in Features, package or enumeration failures in Drivers, and call or speech collaboration failures in Communication."
+          "description": "Validates inbox Media Player audio endpoint quality across DUT, wired, USB, Bluetooth, LE Audio, and display endpoints.",
+          "driverTags": [
+            "Audio",
+            "Dock",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 6,
+          "name": "Application - [Media Player (Inbox App)] (CS Scenarios)",
+          "acronym": "",
+          "description": "Validates Media Player behavior during Connected Standby / Modern Standby power-state scenarios.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 7,
+          "name": "Application - [Media Player (Inbox App)] (Endpoint Transitions)",
+          "acronym": "",
+          "description": "Validates Media Player audio routing and continuity during endpoint transitions (plug/unplug, default device changes).",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 8,
+          "name": "Application - [Media Player (Inbox App)] (Format Support)",
+          "acronym": "",
+          "description": "Validates Media Player support for various audio formats, sample rates, and bit depths.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 9,
+          "name": "Application - [Media Player (Inbox App)] (Media Controls)",
+          "acronym": "",
+          "description": "Validates Media Player media controls (play/pause/seek/skip/mute) functionality.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 10,
+          "name": "Application - [Media Player (Inbox App)] (Volume Controls - Support/Functionality)",
+          "acronym": "",
+          "description": "Validates Media Player hardware and software volume control support and functionality.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 11,
+          "name": "Application - [Movies & TV (Inbox App)] (Audio Endpoint Quality)",
+          "acronym": "",
+          "description": "Validates inbox Movies & TV audio endpoint quality across supported endpoints.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 12,
+          "name": "Application - [Movies & TV (Inbox App)] (CS Scenarios)",
+          "acronym": "",
+          "description": "Validates Movies & TV behavior during Connected Standby / Modern Standby power-state scenarios.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 13,
+          "name": "Application - [Movies & TV (Inbox App)] (Endpoint Transitions)",
+          "acronym": "",
+          "description": "Validates Movies & TV audio routing and continuity during endpoint transitions.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 14,
+          "name": "Application - [Movies & TV (Inbox App)] (Media Controls)",
+          "acronym": "",
+          "description": "Validates Movies & TV media controls (play/pause/seek/skip/mute) functionality.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 15,
+          "name": "Application - [Movies & TV (Inbox App)] (Volume Controls - Support/Functionality)",
+          "acronym": "",
+          "description": "Validates Movies & TV hardware and software volume control support and functionality.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 16,
+          "name": "Application - [Netflix (Store App)] (Audio Endpoint Quality)",
+          "acronym": "",
+          "description": "Validates Netflix Store app audio endpoint quality across supported endpoints including Dock.",
+          "driverTags": [
+            "Audio",
+            "Dock"
+          ]
+        },
+        {
+          "sno": 17,
+          "name": "Application - [Netflix (Store App)] (Media Controls)",
+          "acronym": "",
+          "description": "Validates Netflix Store app media controls functionality.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 18,
+          "name": "Application - [Netflix (Store App)] (Volume Controls - Support/Functionality)",
+          "acronym": "",
+          "description": "Validates Netflix Store app volume control support and functionality.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 19,
+          "name": "Application - [Spotify (Store App)] (Audio Endpoint Quality)",
+          "acronym": "",
+          "description": "Validates Spotify Store app audio endpoint quality across supported endpoints including Dock.",
+          "driverTags": [
+            "Audio",
+            "Dock",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 20,
+          "name": "Application - [Spotify (Store App)] (Media Controls)",
+          "acronym": "",
+          "description": "Validates Spotify Store app media controls functionality.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 21,
+          "name": "Application - [Spotify (Store App)] (Volume Controls - Support/Functionality)",
+          "acronym": "",
+          "description": "Validates Spotify Store app volume control support and functionality.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 22,
+          "name": "Camera App - Endpoint - Support/Functionality",
+          "acronym": "",
+          "description": "Validates microphone endpoint support and functionality within the Camera application for recording and preview scenarios.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 23,
+          "name": "Communication - Accessibility",
+          "acronym": "",
+          "description": "Validates accessibility-related audio experiences including Narrator, Voice Access, voice typing, dictation, and speech recognition.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 24,
+          "name": "Communication - Microsoft Teams (Audio Endpoints)",
+          "acronym": "",
+          "description": "Validates Microsoft Teams audio endpoints, call quality, microphone/speaker selection, and endpoint switching for real-time communications.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 25,
+          "name": "Communication - Zoom (Audio Endpoints)",
+          "acronym": "",
+          "description": "Validates Zoom audio endpoints, call quality, microphone/speaker selection, and endpoint switching for real-time communications.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 26,
+          "name": "Data Collection",
+          "acronym": "",
+          "description": "Validates collection of audio console and OEM verification data after imaging, ensuring settings match project HW requirements.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 27,
+          "name": "Dolby Atmos (Dolby Access Application settings)",
+          "acronym": "",
+          "description": "Validates Dolby Access application profiles (Game/Movie/Music/Voice), custom equalizer, surround virtualizer, and volume leveler On/Off behavior on DUT speakers.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 28,
+          "name": "Dolby Atmos Quality (System Sound - Spatial Audio settings On/Off)",
+          "acronym": "",
+          "description": "Validates Dolby Atmos spatial audio quality with Spatial Sound settings On/Off across DUT speakers, 3.5mm, USB, Bluetooth, LE Audio, and external display (mDP/HDMI) endpoints.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 29,
+          "name": "Dolby Settings - Reboot - System Service - Spatial Audio menu",
+          "acronym": "",
+          "description": "Validates persistence of Dolby Atmos settings, Dolby DAX API service status, and Spatial Audio menu availability across multiple reboot cycles.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 30,
+          "name": "Driver Install Validation",
+          "acronym": "",
+          "description": "Validates audio driver installation paths including imaged drivers, clean installs, Windows Update drivers, side-loaded drivers, display audio drivers, version/date checks, and Device Manager health (no banged-out devices).",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 31,
+          "name": "Edge - Amazon Music (Audio Endpoint Quality)",
+          "acronym": "",
+          "description": "Validates Amazon Music streaming in Microsoft Edge for audio endpoint quality across supported endpoints including Dock.",
+          "driverTags": [
+            "Audio",
+            "Dock",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 32,
+          "name": "Edge - Amazon Prime Video (Audio Endpoint Quality)",
+          "acronym": "",
+          "description": "Validates Amazon Prime Video streaming in Microsoft Edge for audio endpoint quality across supported endpoints including Dock.",
+          "driverTags": [
+            "Audio",
+            "Dock",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 33,
+          "name": "Edge - Hulu.com Disney+ (Audio Endpoint Quality)",
+          "acronym": "",
+          "description": "Validates Hulu.com / Disney+ streaming in Microsoft Edge for audio endpoint quality across supported endpoints including Dock.",
+          "driverTags": [
+            "Audio",
+            "Dock",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 34,
+          "name": "Edge - Hulu.com Disney+ (Media Controls)",
+          "acronym": "",
+          "description": "Validates Hulu.com / Disney+ media controls in Microsoft Edge.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 35,
+          "name": "Edge - Hulu.com Disney+ (Volume Controls - Support/Functionality)",
+          "acronym": "",
+          "description": "Validates Hulu.com / Disney+ volume control support and functionality in Microsoft Edge.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 36,
+          "name": "Edge - Netflix.com (Audio Endpoint Quality)",
+          "acronym": "",
+          "description": "Validates Netflix.com streaming in Microsoft Edge for audio endpoint quality across supported endpoints including Dock.",
+          "driverTags": [
+            "Audio",
+            "Dock",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 37,
+          "name": "Edge - Spotify (Audio Endpoint Quality)",
+          "acronym": "",
+          "description": "Validates Spotify streaming in Microsoft Edge for audio endpoint quality across supported endpoints including Dock.",
+          "driverTags": [
+            "Audio",
+            "Dock",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 38,
+          "name": "Edge - Spotify (Media Controls)",
+          "acronym": "",
+          "description": "Validates Spotify media controls in Microsoft Edge.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 39,
+          "name": "Edge - Spotify (Volume Controls - Support/Functionality)",
+          "acronym": "",
+          "description": "Validates Spotify volume control support and functionality in Microsoft Edge.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 40,
+          "name": "Edge - YouTube (Audio Endpoint Quality)",
+          "acronym": "",
+          "description": "Validates YouTube streaming in Microsoft Edge for audio endpoint quality across supported endpoints including Dock.",
+          "driverTags": [
+            "Audio",
+            "Dock",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 41,
+          "name": "Edge - YouTube (Media Controls)",
+          "acronym": "",
+          "description": "Validates YouTube media controls in Microsoft Edge.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 42,
+          "name": "Edge - YouTube (Volume Controls - Support/Functionality)",
+          "acronym": "",
+          "description": "Validates YouTube volume control support and functionality in Microsoft Edge.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 43,
+          "name": "Media Controls",
+          "acronym": "",
+          "description": "Validates media control functionality (play/pause/seek/skip/mute) across audio endpoints and applications.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 44,
+          "name": "PAS - Samsung Buds2",
+          "acronym": "",
+          "description": "Validates Personal Audio Sharing (PAS) with LE headsets (e.g. Samsung Buds2) including shared connection creation, streaming, media controls, volume, Teams calls, start/stop cycles, and power-state recovery.",
+          "driverTags": [
+            "Audio"
+          ]
+        },
+        {
+          "sno": 45,
+          "name": "Sound Recorder - Endpoint -Record/Playback - Support/Functionality",
+          "acronym": "",
+          "description": "Validates Sound Recorder endpoint support for recording and playback using DUT mic array, 3.5mm, USB, Bluetooth, and LE Audio headsets.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
+        },
+        {
+          "sno": 46,
+          "name": "Volume Controls - Support/Functionality",
+          "acronym": "",
+          "description": "Validates hardware and software volume control support and functionality across audio endpoints.",
+          "driverTags": [
+            "Audio",
+            "SAM"
+          ]
         }
       ]
     },
@@ -1510,7 +1930,7 @@
           "name": "SEMMAdvancedSettings",
           "acronym": "SEMM",
           "description": "Validates advanced Surface Enterprise Management Mode configuration, including administrator-controlled Surface UEFI settings, firmware-level hardware policies, security options, configuration persistence, and protection against unauthorized changes. Includes applying, modifying, and verifying advanced settings on SEMM-enrolled Surface devices.",
-          "driverTags": ""
+          "driverTags": ["All","UEFI"]
         },
         {
           "sno": 2,
@@ -2773,7 +3193,8 @@
           "acronym": "",
           "description": "Validates driver and firmware packages by verifying package identity, versioning, installation state, INF correctness, servicing compliance, compatibility with supported operating-system releases, and alignment with approved release payloads while ensuring no blocking issues exist in driver verification results.",
           "driverTags": ""
-        }        ]
+        }        
+      ]
     },
     {
       "sno": 15,
